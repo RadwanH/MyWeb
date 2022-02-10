@@ -16,17 +16,15 @@ header {
     display: flex;
     justify-content: space-between; /* it puts space between the elements in the header*/
     align-items: center; /*centers vertically*/
-    padding: 10px 200px; /* the 15px is for right and left and the 200px is for up and down*/
-
+    padding: 7px 200px; /* the 15px is for right and left and the 200px is for up and down*/
+    
 }
 
 .logo {
-    text-decoration: none;
+    /*for icon logo*/
     color: #3a6cf4;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.8em; /* em is reletive to body size*/
-
+    font-size: 2.5em;
+    text-decoration: none;
 }
 
 .navigation a{
@@ -43,7 +41,6 @@ header {
 
 section {
     padding: 100px 200px;
-
 }
 
 .main {
@@ -254,7 +251,7 @@ section {
     }
 
     .logo {
-        font-size: 1.2em; /* em is reletive to body size*/
+        font-size: 2.5em; /* em is reletive to body size*/
     
     }
 
