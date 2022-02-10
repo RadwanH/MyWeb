@@ -131,6 +131,11 @@ section {
 
 }
 
+.card-link{
+    text-decoration: none;
+    color: #000;
+}
+
 .card:hover {
     background-color: rgba(1, 1, 1, 5%);
     transform: scale(1.1);
@@ -300,4 +305,130 @@ section {
     body{
         font-size: 10px;
     }
+}
+
+
+
+
+/* FILTERS PAGE*/
+  
+.wrapper {
+    background-color: #fff;
+    width: 50em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 50px;
+}
+.wrapper h2{
+    display: flex; /*so i can center it*/
+    justify-content:  center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.wrapper article {
+    margin-left: 10px;
+    font-size:1.2em;
+    color: #000;
+    font-weight: 500;
+}
+
+.filter-canvas{
+    /*overflow: hidden;
+    margin-bottom: 20px;*/
+
+    background-color: #02374f;
+}
+
+.canvas-div {
+    width: 100%;
+}
+
+#canvas {
+
+    max-height: 50vh;
+    background-color: #e3e3e3;
+    margin: inherit;
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+
+.wrapper h3{
+    font-family: catamaran ;
+    font-size: 25px;
+    font-weight: 600;
+    color: #111;
+    margin: 10px 10px;
+}
+#upload {
+    font-size: 24px;
+    height: 45px;
+    border-radius: 15px;
+    margin-left: 10px;
+    
+}
+
+
+
+.btnbox{
+    width: calc(100% - 80px);
+    padding: 40px 40px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+
+.btnbox .btn{
+    width: calc((100% - 80px)/3);
+    height: 45px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+    
+    
+}
+.btnbox .btn:hover {
+     background-color: #0a49f6;
+}
+
+
+
+#reset{
+    margin-left: 25% ;
+    width: calc((100% - 80px)/2);
+    height: 45px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+}
+#reset:hover {
+    background-color: #0a49f6;
+}
+
+
+@media (max-width:1023px){
+    #canvas {
+    width: 50%;
+    margin: 20px 25% ;
+   
+    }
+    
+    .wrapper h3{
+        margin: 10px 15%;
+    }
+        #upload {
+        margin-left: 15%;
+
+    }
+    
+    .btnbox{
+        width: 50%;
+        padding: 0 0 0 5% ;
+        margin: 5px 25% 20px;
+    }
+
 }
