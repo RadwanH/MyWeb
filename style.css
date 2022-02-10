@@ -9,7 +9,7 @@
 }
 
 header {
-    background-color: #dfff;
+    background-color: #fff;
     width: 100%;
     position: fixed; /* it makes the header stay as you scroll*/
     z-index: 999; /* it prevents other elements from covering the header*/
