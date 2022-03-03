@@ -338,12 +338,19 @@ section {
 .filter-canvas{
     /*overflow: hidden;
     margin-bottom: 20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: #02374f;
 }
 
 .canvas-div {
     width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
 }
 
 #canvas {
@@ -416,12 +423,24 @@ section {
     margin: 20px 25% ;
    
     }
+
+    .wrapper {
+        width: 50em;
+        padding: 25px;
+    }
+
+    .wrapper article {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
     
     .wrapper h3{
-        margin: 10px 15%;
+        margin-left: 25%;
+        margin-right: 25%;
     }
-        #upload {
-        margin-left: 15%;
+
+    #upload {
+        margin-left: 25%;
 
     }
     
