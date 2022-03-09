@@ -1,5 +1,5 @@
 var canvas = document.getElementById("canvas");
-var orgimage, imageGray, redImage, rainbowImage, rusFlag, greenImage, blueImage = null; 
+var orgimage, imageGray, redImage, rainbowImage, ukrainianFlag, rusFlag, greenImage, blueImage = null; 
 var imageUpload = document.getElementById("upload");
 
 
@@ -10,6 +10,7 @@ function imageUploader() {
     redImage =  new SimpleImage(imageUpload);
     rainbowImage = new SimpleImage(imageUpload);
     rusFlag = new SimpleImage(imageUpload);
+    ukrainianFlag = new SimpleImage(imageUpload);
     greenImage = new SimpleImage(imageUpload);
     blueImage = new SimpleImage(imageUpload);
     orgimage.drawTo(canvas);
@@ -91,7 +92,9 @@ function reset(){
 
 }
 
-function doRainbow(){
+
+/* rainbow filter will not be used for now*/
+/*function doRainbow(){
   for (var pixel of rainbowImage.values()){
     var w = rainbowImage.getWidth();
     var h = rainbowImage.getHeight();
@@ -126,8 +129,37 @@ function rainbow(){
     doRainbow();
     rainbowImage.drawTo(canvas);
   }
-}
+}*/
 
+/******************************************* */
+function doUkrainianFlag(){
+  for (var pixel of ukrainianFlag.values()){
+     var w = ukrainianFlag.getWidth();
+    var h = ukrainianFlag.getHeight();
+    var x = pixel.getX();
+    var y = pixel.getY();
+    var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+    
+    if(y <= h/2 ){  //0, 87, 183 (-some values from all to make it transparent)
+        //pixel.setRed(0);
+        pixel.setGreen(60);
+        pixel.setBlue(200);
+       
+    } if (y > h/2){ //255, 215, 0 (-some values from all to make it transparent)
+        pixel.setRed(215);
+        pixel.setGreen(185);
+        //pixel.setBlue(0);
+    } 
+} return ukrainianFlag;
+}
+ 
+function ukrainianFlagFilter(){
+  if (loaded(ukrainianFlag)){
+    doUkrainianFlag();
+    ukrainianFlag.drawTo(canvas);
+  }
+}
+/******************************************* */
 
 
 function doRusFlag(){
