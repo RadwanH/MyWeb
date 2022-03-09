@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 
     <title>RadwanBek</title>
 </head>
@@ -37,15 +37,19 @@
                 <div class="canvas-div"> <canvas id="canvas"> </canvas> </div>
                 <div class="upload-sec">
                     <h3> Upload Image :</h3>
-                    <input type="file" multiple="false" accept="image/*" id="upload" onchange="imageUploader()"> <br>
+                    <div class="img-upload-div">
+                        <input type="file" multiple="false" accept="image/*" id="upload" onchange="imageUploader()">
+                    </div>
+
                     <div class="btnbox">
                         <input class="btn" type="button" value="Grayscale" onclick="grayFilter()">
                         <input class="btn" type="button" value="Red filter" onclick="doRedFilter()">
-                        <input class="btn" type="button" value="Rainbow" onclick="rainbow()"> 
+                        <input class="btn" type="button" value="Rainbow" onclick="rainbow()">
                         <input class="btn" type="button" value="Russian flag" onclick="rusFlagFilter()">
                         <input class="btn" type="button" value="Alien Green" onclick="greenFilter()">
-                        <input class="btn" type="button" value="Blue Filter" onclick="blueFilter()"> 
-                        <input type="button" value="Reset" onclick="reset()" id="reset">
+                        <input class="btn" type="button" value="Blue Filter" onclick="blueFilter()">
+                    </div>
+                    <div class="reset-button"> <input type="button" value="Reset" onclick="reset()" id="reset">
                     </div>
                 </div>
             </div>
